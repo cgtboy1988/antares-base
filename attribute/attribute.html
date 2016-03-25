@@ -57,7 +57,7 @@
 <dl class="class">
 <dt id="antares.attribute.Attribute">
 <em class="property">class </em><code class="descclassname">antares.attribute.</code><code class="descname">Attribute</code><span class="sig-paren">(</span><em>name</em>, <em>atype</em>, <em>context</em>, <em>datatype</em>, <em>scale</em>, <em>description=''</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.attribute.Attribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>Represents an attribute object. An attribute is initialized with its name,
+<dd><p>This is the Attribute class. An attribute is initialized with its name,
 the context it belongs to, the datatype of its value, a description, and the scale of its value.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -69,7 +69,7 @@ the context it belongs to, the datatype of its value, a description, and the sca
 </tr>
 <tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">datatype(string): data type of the attribute value</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">scale(<a class="reference internal" href="int_pair.html#antares.attribute.IntPair" title="antares.attribute.IntPair"><code class="xref py py-class docutils literal"><span class="pre">IntPair</span></code></a>): the range to which the attribute value scales</td>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">scale(<a class="reference internal" href="int_pair.html#antares.attribute.IntPair" title="antares.attribute.IntPair"><code class="xref py py-class docutils literal"><span class="pre">IntPair</span></code></a> or <a class="reference internal" href="float_pair.html#antares.attribute.FloatPair" title="antares.attribute.FloatPair"><code class="xref py py-class docutils literal"><span class="pre">FloatPair</span></code></a>): the range to which the attribute value scales</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">scale(<a class="reference internal" href="float_pair.html#antares.attribute.FloatPair" title="antares.attribute.FloatPair"><code class="xref py py-class docutils literal"><span class="pre">FloatPair</span></code></a>): the range to which the attribute value scales</td>
 </tr>
@@ -111,8 +111,8 @@ the context it belongs to, the datatype of its value, a description, and the sca
 <tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.enum_ints" title="antares.attribute.Attribute.enum_ints"><code class="xref py py-obj docutils literal"><span class="pre">enum_ints</span></code></a></td>
 <td>A finite list of possible int values for the attribute.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.attribute.Attribute.enum_strs" title="antares.attribute.Attribute.enum_strs"><code class="xref py py-obj docutils literal"><span class="pre">enum_strs</span></code></a></td>
-<td>A finite list of possible string values for the attribute.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Attribute.enum_strs</span></code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -123,8 +123,8 @@ the context it belongs to, the datatype of its value, a description, and the sca
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.timeDelimitedSeries" title="antares.attribute.Attribute.timeDelimitedSeries"><code class="xref py py-obj docutils literal"><span class="pre">timeDelimitedSeries</span></code></a>(start_time,&nbsp;end_time)</td>
-<td>A time-delimited series of all the past values of the attribute.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Attribute.timeDelimitedSeries</span></code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -189,9 +189,12 @@ It is a Numpy array.</p>
 <dl class="attribute">
 <dt id="antares.attribute.Attribute.datatype">
 <code class="descname">datatype</code><em class="property"> = ''</em><a class="headerlink" href="#antares.attribute.Attribute.datatype" title="Permalink to this definition">¶</a></dt>
-<dd><p>The data type of the attribute. The valid data type could be either
-a Python&#8217;s built-in type (boolean, int, float, string, timestamp) or a composite
-object (UncertainFloat, ProbabilityCurve, IntPair, FloatPair, TimePeriod).</p>
+<dd><p>The data type of the attribute. The valid data type could be one of the following:
+(1) a Python&#8217;s built-in primitive type (&#8220;boolean&#8221;, &#8220;int&#8221;, &#8220;float&#8221;, &#8220;string&#8221;), (2) a Python package
+(&#8220;timestamp&#8221;), or (3) a proprietary, composite object provided by ANTARES
+(<code class="xref py py-class docutils literal"><span class="pre">antares.context.UncertainFloat</span></code>, <code class="xref py py-class docutils literal"><span class="pre">antares.context.ProbabilityCurve</span></code>,
+<code class="xref py py-class docutils literal"><span class="pre">antares.context.IntPair</span></code>, <code class="xref py py-class docutils literal"><span class="pre">antares.context.FloatPair</span></code>, <code class="xref py py-class docutils literal"><span class="pre">antares.context.TimePeriod</span></code>)
+as are documented within the API.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -246,48 +249,7 @@ attribute value can be only picked from this list.</p>
 </table>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="antares.attribute.Attribute.enum_strs">
-<code class="descname">enum_strs</code><em class="property"> = None</em><a class="headerlink" href="#antares.attribute.Attribute.enum_strs" title="Permalink to this definition">¶</a></dt>
-<dd><p>A finite list of possible string values for the attribute. It is
-available only when datatype = &#8220;enumerated string&#8221;. In that case the
-attribute value can be only picked from this list.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of strings</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <p class="rubric">Methods Documentation</p>
-<dl class="method">
-<dt id="antares.attribute.Attribute.timeDelimitedSeries">
-<code class="descname">timeDelimitedSeries</code><span class="sig-paren">(</span><em>start_time</em>, <em>end_time</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.attribute.Attribute.timeDelimitedSeries" title="Permalink to this definition">¶</a></dt>
-<dd><p>A time-delimited series of all the past values of the attribute.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>start_time</strong> (<em>timestamp</em>) &#8211; the start of time series</li>
-<li><strong>end_time</strong> (<em>timestamp</em>) &#8211; the end of time series</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">time series of the attribute values from <cite>start_time</cite> to
-<cite>end_time</cite>.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Pandas Time Series</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </dd></dl>
 
 </div>
