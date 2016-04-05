@@ -87,32 +87,23 @@ the context it belongs to, the datatype of its value, a scale, and the descripti
 <tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.vector" title="antares.attribute.Attribute.vector"><code class="xref py py-obj docutils literal"><span class="pre">vector</span></code></a></td>
 <td>The vector of all the past values computed for the attribute.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Attribute.time_series</span></code></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.description" title="antares.attribute.Attribute.description"><code class="xref py py-obj docutils literal"><span class="pre">description</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#antares.attribute.Attribute.description" title="antares.attribute.Attribute.description"><code class="xref py py-obj docutils literal"><span class="pre">description</span></code></a></td>
 <td>A short description of the attribute.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.attribute.Attribute.name" title="antares.attribute.Attribute.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.name" title="antares.attribute.Attribute.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
 <td>The name of the attribute.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.context" title="antares.attribute.Attribute.context"><code class="xref py py-obj docutils literal"><span class="pre">context</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#antares.attribute.Attribute.context" title="antares.attribute.Attribute.context"><code class="xref py py-obj docutils literal"><span class="pre">context</span></code></a></td>
 <td>The context that the attribute belongs to.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.attribute.Attribute.datatype" title="antares.attribute.Attribute.datatype"><code class="xref py py-obj docutils literal"><span class="pre">datatype</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.datatype" title="antares.attribute.Attribute.datatype"><code class="xref py py-obj docutils literal"><span class="pre">datatype</span></code></a></td>
 <td>The data type of the attribute.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.annotation" title="antares.attribute.Attribute.annotation"><code class="xref py py-obj docutils literal"><span class="pre">annotation</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#antares.attribute.Attribute.annotation" title="antares.attribute.Attribute.annotation"><code class="xref py py-obj docutils literal"><span class="pre">annotation</span></code></a></td>
 <td>Annotation for the most-recently computed value.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.attribute.Attribute.confidence" title="antares.attribute.Attribute.confidence"><code class="xref py py-obj docutils literal"><span class="pre">confidence</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.confidence" title="antares.attribute.Attribute.confidence"><code class="xref py py-obj docutils literal"><span class="pre">confidence</span></code></a></td>
 <td>Confidence for the most-recently computed value.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#antares.attribute.Attribute.enum_ints" title="antares.attribute.Attribute.enum_ints"><code class="xref py py-obj docutils literal"><span class="pre">enum_ints</span></code></a></td>
-<td>A finite list of possible int values for the attribute.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Attribute.enum_strs</span></code></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -123,9 +114,6 @@ the context it belongs to, the datatype of its value, a scale, and the descripti
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Attribute.timeDelimitedSeries</span></code></td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Attributes Documentation</p>
@@ -228,22 +216,6 @@ as are documented within the API.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="antares.attribute.Attribute.enum_ints">
-<code class="descname">enum_ints</code><em class="property"> = None</em><a class="headerlink" href="#antares.attribute.Attribute.enum_ints" title="Permalink to this definition">¶</a></dt>
-<dd><p>A finite list of possible int values for the attribute. It is
-available only when datatype = &#8220;enumerated int&#8221;. In that case the
-attribute value can be only picked from this list.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list of ints</td>
 </tr>
 </tbody>
 </table>
