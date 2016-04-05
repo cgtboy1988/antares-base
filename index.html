@@ -132,22 +132,84 @@
 <div class="section" id="class-inheritance-diagram">
 <h2>Class inheritance diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="_images/classes.png"><img alt="_images/classes.png" src="_images/classes.png" style="width: 500px; height: 480px;" /></a>
-<div class="section" id="class-composition-relationship">
-<h3>Class composition relationship<a class="headerlink" href="#class-composition-relationship" title="Permalink to this headline">¶</a></h3>
-<p>An <a class="reference internal" href="alert/external_alert.html#antares.alert.ExternalAlert" title="antares.alert.ExternalAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.ExternalAlert</span></code></a> has exactly one
-<a class="reference internal" href="context/context.html#antares.context.Context" title="antares.context.Context"><code class="xref py py-class docutils literal"><span class="pre">antares.context.Context</span></code></a>, which is <a class="reference internal" href="context/ea_context.html#antares.context.EAContext" title="antares.context.EAContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.EAContext</span></code></a>.</p>
-<p>A <a class="reference internal" href="alert/camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a> has one to many
-<a class="reference internal" href="context/context.html#antares.context.Context" title="antares.context.Context"><code class="xref py py-class docutils literal"><span class="pre">antares.context.Context</span></code></a>.</p>
-<p>A <a class="reference internal" href="context/context.html#antares.context.Context" title="antares.context.Context"><code class="xref py py-class docutils literal"><span class="pre">antares.context.Context</span></code></a> has one to many <a class="reference internal" href="attribute/attribute.html#antares.attribute.Attribute" title="antares.attribute.Attribute"><code class="xref py py-class docutils literal"><span class="pre">antares.attribute.Attribute</span></code></a>.</p>
-</div>
 </div>
 <div class="section" id="rules-constraints">
 <h2>Rules &amp; Constraints<a class="headerlink" href="#rules-constraints" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="rules_constraints.html">Rules &amp; Constraints</a></li>
-</ul>
+<ol class="arabic">
+<li><p class="first">Attributes can be only accessed through the context that they belong to.</p>
+</li>
+<li><p class="first">Values of Attributes are accessed directly by their names.
+For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">value</span> <span class="o">=</span> <span class="n">alert</span><span class="o">.</span><span class="n">CA</span><span class="o">.</span><span class="n">GMinusR</span>
+</pre></div>
 </div>
+<p>This will assign most-recently computed value for the attribute GMinusR
+to <code class="docutils literal"><span class="pre">value</span></code>. It will raise an <a class="reference external" href="https://docs.python.org/3.4/library/exceptions.html#AttributeError" title="(in Python v3.4)"><code class="xref py py-exc docutils literal"><span class="pre">AttributeError</span></code></a> exception if CA context
+has no attribute called <code class="docutils literal"><span class="pre">GMinusR</span></code>.</p>
+</li>
+<li><p class="first">Attributes are changed when we assign values to them.
+For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">alert</span><span class="o">.</span><span class="n">CA</span><span class="o">.</span><span class="n">GMinusR</span> <span class="o">=</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p>This will assign <code class="docutils literal"><span class="pre">value</span></code> to the attribute <code class="docutils literal"><span class="pre">GMinusR</span></code> that is defined under
+CA context. It will raise an <a class="reference external" href="https://docs.python.org/3.4/library/exceptions.html#AttributeError" title="(in Python v3.4)"><code class="xref py py-exc docutils literal"><span class="pre">AttributeError</span></code></a> exception if CA context
+has no attribute called <code class="docutils literal"><span class="pre">GMinusR</span></code>.</p>
+</li>
+<li><p class="first">Timestamp for a newly computed attribute value is assigned implicitly
+when the value is assigned to the attribute.</p>
+</li>
+<li><p class="first">Exceptions are handled by callers. The only exception in the API is Python&#8217;s
+built-in <a class="reference external" href="https://docs.python.org/3.4/library/exceptions.html#AttributeError" title="(in Python v3.4)"><code class="xref py py-exc docutils literal"><span class="pre">AttributeError</span></code></a> exception.</p>
+</li>
+<li><p class="first">There will be a max size for strings. The max size is to be determined.</p>
+</li>
+<li><p class="first">The value of an attribute may be NA (not applicable), but NK (not known)
+is not allowed as a value.</p>
+</li>
+<li><p class="first">The value for a Base Attribute is provided by the Camera in a
+camera alert or from the Aggregated AstroObject Catalogue for the
+relevant alert replica, and is always present when appropriate.</p>
+</li>
+<li><p class="first">The value for a Derived Attribute will be present for a derivation
+function for a given context if its arguments are present and if
+the algorithm for that derivation function completes.</p>
+</li>
+<li><p class="first">CA and LA attributes are always available.</p>
+</li>
+<li><p class="first">AR attributes are only accessible during per-replica processing;
+AO attributes are available if <code class="docutils literal"><span class="pre">AR-HasAstroObject</span></code> is
+<a class="reference external" href="https://docs.python.org/3.4/library/constants.html#True" title="(in Python v3.4)"><code class="xref py py-data docutils literal"><span class="pre">True</span></code></a>; ES only if <code class="docutils literal"><span class="pre">AO-kind</span> <span class="pre">=</span> <span class="pre">&quot;extended</span> <span class="pre">source&quot;</span></code>; PS only if
+<code class="docutils literal"><span class="pre">AR-HasAstroObject</span></code> is <a class="reference external" href="https://docs.python.org/3.4/library/constants.html#True" title="(in Python v3.4)"><code class="xref py py-data docutils literal"><span class="pre">True</span></code></a> and <code class="docutils literal"><span class="pre">AO-kind</span> <span class="pre">=</span> <span class="pre">&quot;point</span>
+<span class="pre">source&quot;</span></code>.</p>
+</li>
+<li><p class="first">CB attributes are only visible during per-combo processing.</p>
+</li>
+<li><p class="first">CA processing can iterate through the alerts of its
+locus-aggregated alert to access AR, PS, and ES attributes. For
+example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">alert</span><span class="o">.</span><span class="n">LA</span><span class="o">.</span><span class="n">assembleTimeSeries_replics</span><span class="p">(</span> <span class="s1">&#39;AR&#39;</span><span class="p">,</span> <span class="s1">&#39;Redshift&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal"><span class="pre">alert</span></code> is a camera alert and the above call returns a
+time series of all the values of the attribute <code class="docutils literal"><span class="pre">Redshift</span></code> under
+<code class="docutils literal"><span class="pre">AR</span></code> context of the alert replicas associated with a locus
+aggregated alert.</p>
+</li>
+<li><p class="first">CB processing can iterate through its replicas to access AR, AO,
+PS, and ES attributes.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">combo</span><span class="o">.</span><span class="n">CB</span><span class="o">.</span><span class="n">assembleVector</span><span class="p">(</span> <span class="s1">&#39;AR&#39;</span><span class="p">,</span> <span class="s1">&#39;Redshift&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal"><span class="pre">combo</span></code> is an alert combo and the above call returns a
+numpy array of all the values of the attribute <code class="docutils literal"><span class="pre">Redshift</span></code> under
+<code class="docutils literal"><span class="pre">AR</span></code> context of the alert replicas associated with the alert
+combo.</p>
+</li>
+<li><p class="first">A derived attribute cannot have a circular definition (and so
+definitions form a directed acyclic graph).</p>
+</li>
+</ol>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
@@ -225,10 +287,7 @@
 <li><a class="reference internal" href="#pre-defined-attributes">Pre-defined Attributes</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#class-inheritance-diagram">Class inheritance diagram</a><ul>
-<li><a class="reference internal" href="#class-composition-relationship">Class composition relationship</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#class-inheritance-diagram">Class inheritance diagram</a></li>
 <li><a class="reference internal" href="#rules-constraints">Rules &amp; Constraints</a></li>
 <li><a class="reference internal" href="#examples">Examples</a></li>
 <li><a class="reference internal" href="#assumptions-and-comments">Assumptions and Comments</a></li>
