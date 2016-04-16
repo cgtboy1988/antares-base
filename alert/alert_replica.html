@@ -89,7 +89,7 @@ Replica is initialized with its associated astro object (optional).</p>
 <td>AR (Alert Replica) context object.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#antares.alert.AlertReplica.AO" title="antares.alert.AlertReplica.AO"><code class="xref py py-obj docutils literal"><span class="pre">AO</span></code></a></td>
-<td>AO (Astro Object) context object.</td>
+<td>AO (Astro Object) context object (optional).</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertReplica.ES" title="antares.alert.AlertReplica.ES"><code class="xref py py-obj docutils literal"><span class="pre">ES</span></code></a></td>
 <td>ES (Extended Source) context object.</td>
@@ -115,9 +115,6 @@ Replica is initialized with its associated astro object (optional).</p>
 <tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertReplica.mark_as_rare" title="antares.alert.AlertReplica.mark_as_rare"><code class="xref py py-obj docutils literal"><span class="pre">mark_as_rare</span></code></a>(annotation)</td>
 <td>Mark the alert as a rare alert.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.alert.AlertReplica.commit" title="antares.alert.AlertReplica.commit"><code class="xref py py-obj docutils literal"><span class="pre">commit</span></code></a>()</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Attributes Documentation</p>
@@ -139,7 +136,7 @@ AR attributes are only accessible during per-replica processing.</p>
 <dl class="attribute">
 <dt id="antares.alert.AlertReplica.AO">
 <code class="descname">AO</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.AlertReplica.AO" title="Permalink to this definition">¶</a></dt>
-<dd><p>AO (Astro Object) context object. AO attributes are available if
+<dd><p>AO (Astro Object) context object (optional). AO attributes are available if
 <code class="docutils literal"><span class="pre">AR.HasAstroObject</span></code> = <a class="reference external" href="https://docs.python.org/3.4/library/constants.html#True" title="(in Python v3.4)"><code class="xref py py-data docutils literal"><span class="pre">True</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -215,11 +212,6 @@ if <code class="docutils literal"><span class="pre">AO.kind</span> <span class="
 </tbody>
 </table>
 </dd></dl>
-
-<dl class="method">
-<dt id="antares.alert.AlertReplica.commit">
-<code class="descname">commit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.AlertReplica.commit" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
