@@ -87,6 +87,9 @@ It contains all the attributes defined under CB context.
 <tr class="row-odd"><td><a class="reference internal" href="#antares.context.CBContext.assembleVector_replicas" title="antares.context.CBContext.assembleVector_replicas"><code class="xref py py-obj docutils literal"><span class="pre">assembleVector_replicas</span></code></a>(context,&nbsp;attrname)</td>
 <td>The function assembles a vector of all the values of an attribute inside a context of the alert replicas associated with the alert combo.</td>
 </tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.context.CBContext.getAlert" title="antares.context.CBContext.getAlert"><code class="xref py py-obj docutils literal"><span class="pre">getAlert</span></code></a>()</td>
+<td>Returns the Alert that holds the Context.</td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Attributes Documentation</p>
@@ -139,6 +142,22 @@ inside a context of the alert replicas associated with the alert combo.</p>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.4/library/stdtypes.html#list" title="(in Python v3.4)">list</a></p>
 </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="antares.context.CBContext.getAlert">
+<code class="descname">getAlert</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.CBContext.getAlert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Alert that holds the Context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns the Alert that holds the Context, which is an Alert Combo in this case.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../alert/general_alert.html#antares.alert.Alert" title="antares.alert.Alert">Alert</a></td>
 </tr>
 </tbody>
 </table>
