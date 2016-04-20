@@ -80,7 +80,10 @@ It contains all the attributes defined under EA context.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="la_context.html#antares.context.LAContext.getAlert" title="antares.context.LAContext.getAlert"><code class="xref py py-obj docutils literal"><span class="pre">getAlert</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="la_context.html#antares.context.LAContext.getContainer" title="antares.context.LAContext.getContainer"><code class="xref py py-obj docutils literal"><span class="pre">getContainer</span></code></a>()</td>
+<td>This returns the Context&#8217;s container, which is an Alert in this case.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="la_context.html#antares.context.LAContext.getAlert" title="antares.context.LAContext.getAlert"><code class="xref py py-obj docutils literal"><span class="pre">getAlert</span></code></a>()</td>
 <td>Returns the Alert that holds the Context.</td>
 </tr>
 </tbody>
@@ -101,6 +104,22 @@ It contains all the attributes defined under EA context.</p>
 </dd></dl>
 
 <p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="antares.context.EAContext.getContainer">
+<code class="descname">getContainer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.EAContext.getContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>This returns the Context&#8217;s container, which is an ExternalAlert in this case.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent Alert.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../alert/external_alert.html#antares.alert.ExternalAlert" title="antares.alert.ExternalAlert">ExternalAlert</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="method">
 <dt id="antares.context.EAContext.getAlert">
 <code class="descname">getAlert</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.EAContext.getAlert" title="Permalink to this definition">¶</a></dt>
