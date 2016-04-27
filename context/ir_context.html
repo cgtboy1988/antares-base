@@ -61,7 +61,7 @@
 <dd><p>Bases: <a class="reference internal" href="context.html#antares.context.Context" title="antares.context.Context"><code class="xref py py-class docutils literal"><span class="pre">antares.context.Context</span></code></a></p>
 <p>Represents a IR (Image RAFT) context object which is a sub-class of <a class="reference internal" href="context.html#antares.context.Context" title="antares.context.Context"><code class="xref py py-class docutils literal"><span class="pre">Context</span></code></a>.
 It contains all the attributes defined under IR context.
-:param: container_id(int): ID of the object that owns the context, which is an ISContext.</p>
+:param: container_id(int): ID of the object that owns the context, which is an <a class="reference internal" href="is_context.html#antares.context.ISContext" title="antares.context.ISContext"><code class="xref py py-class docutils literal"><span class="pre">ISContext</span></code></a>.</p>
 <p class="rubric">Attributes Summary</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -82,10 +82,7 @@ It contains all the attributes defined under IR context.
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#antares.context.IRContext.getContainer" title="antares.context.IRContext.getContainer"><code class="xref py py-obj docutils literal"><span class="pre">getContainer</span></code></a>()</td>
-<td>This returns the Context&#8217;s container, which is an ISContext in this case.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.context.IRContext.getAlert" title="antares.context.IRContext.getAlert"><code class="xref py py-obj docutils literal"><span class="pre">getAlert</span></code></a>()</td>
-<td>Returns the Alert that holds the Context.</td>
+<td>This returns the Context&#8217;s container, which is an <a class="reference internal" href="is_context.html#antares.context.ISContext" title="antares.context.ISContext"><code class="xref py py-class docutils literal"><span class="pre">ISContext</span></code></a> in this case.</td>
 </tr>
 </tbody>
 </table>
@@ -108,30 +105,14 @@ It contains all the attributes defined under IR context.
 <dl class="method">
 <dt id="antares.context.IRContext.getContainer">
 <code class="descname">getContainer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.IRContext.getContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>This returns the Context&#8217;s container, which is an ISContext in this case.</p>
+<dd><p>This returns the Context&#8217;s container, which is an <a class="reference internal" href="is_context.html#antares.context.ISContext" title="antares.context.ISContext"><code class="xref py py-class docutils literal"><span class="pre">ISContext</span></code></a> in this case.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent context.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent <a class="reference internal" href="is_context.html#antares.context.ISContext" title="antares.context.ISContext"><code class="xref py py-class docutils literal"><span class="pre">ISContext</span></code></a>.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="is_context.html#antares.context.ISContext" title="antares.context.ISContext">ISContext</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="antares.context.IRContext.getAlert">
-<code class="descname">getAlert</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.IRContext.getAlert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the Alert that holds the Context.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Returns the Alert that holds the Context, which is a Camera Alert in this case.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../alert/camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert">CameraAlert</a></td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="is_context.html#antares.context.ISContext" title="antares.context.ISContext"><code class="xref py py-class docutils literal"><span class="pre">ISContext</span></code></a></td>
 </tr>
 </tbody>
 </table>

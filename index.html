@@ -63,6 +63,13 @@
 <p class="caption"><span class="caption-text">This figure demonstrates how ANTARES processes stage code.  Here, workers are individual threads operating on nodes.  They receive alert data to process from the master node and execute stages on that data as shown here.</span></p>
 </div>
 <p>This document specifies the ANTARES API, which allows development of stage code for execution on ANTARES.</p>
+<div class="section" id="definitions">
+<h3>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>&#8220;Contains&#8221; denotes that the &#8220;container&#8221; is the single object which &#8220;contains;&#8221; only a single object may be a &#8220;container&#8221; of the &#8220;contained&#8221; object.  The term denotes ownership of the &#8220;contained&#8221; object.</li>
+<li>&#8220;Has&#8221; denotes a reference from one object to another.  The object may &#8220;have&#8221; references to multiple objects with this relationship.  Relationships between objects are, by default, &#8220;has&#8221; relationships; &#8220;contains&#8221; relationships will be explicitally noted.</li>
+</ol>
+</div>
 <div class="section" id="alert-related">
 <h3>Alert related<a class="headerlink" href="#alert-related" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
@@ -280,6 +287,7 @@ definitions form a directed acyclic graph).</p>
   <ul>
 <li><a class="reference internal" href="#">Antares Documentation</a><ul>
 <li><a class="reference internal" href="#api-reference">API reference</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions</a></li>
 <li><a class="reference internal" href="#alert-related">Alert related</a></li>
 <li><a class="reference internal" href="#context-related">Context related</a></li>
 <li><a class="reference internal" href="#attribute-related">Attribute related</a></li>

@@ -67,6 +67,10 @@ Combo is initialized with a set of alert replicas.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">combo_id (<a class="reference external" href="https://docs.python.org/3.4/library/functions.html#int" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a>): The unique ID of the Combo.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">parent (<code class="xref py py-class docutils literal"><span class="pre">CAContext</span></code>): The CAContext which contains this Combo.</td>
+</tr>
 <tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">alert_replicas (<a class="reference external" href="https://docs.python.org/3.4/library/stdtypes.html#list" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">list</span></code></a>): a list of <a class="reference internal" href="alert_replica.html#antares.alert.AlertReplica" title="antares.alert.AlertReplica"><code class="xref py py-class docutils literal"><span class="pre">AlertReplica</span></code></a></td>
 </tr>
 </tbody>
@@ -99,7 +103,7 @@ Combo is initialized with a set of alert replicas.</p>
 <dl class="attribute">
 <dt id="antares.alert.AlertCombo.CB">
 <code class="descname">CB</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.AlertCombo.CB" title="Permalink to this definition">¶</a></dt>
-<dd><p>CB (Combo) context object. CB attributes are only visible during
+<dd><p>CB (Combo) context object. The Alert Combo contains the CBContext. CB attributes are only visible during
 per-combo processing.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
