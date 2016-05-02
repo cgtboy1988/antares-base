@@ -66,7 +66,7 @@ It contains all the attributes defined under CA context.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">container_id(int): ID of the object that owns the context, which will be a <code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">container_id(int): ID of the object that contains the context, which will be a <code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -80,6 +80,9 @@ It contains all the attributes defined under CA context.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#antares.context.CAContext.name" title="antares.context.CAContext.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
 <td>Name of CA context.</td>
 </tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.context.CAContext.camera_alert" title="antares.context.CAContext.camera_alert"><code class="xref py py-obj docutils literal"><span class="pre">camera_alert</span></code></a></td>
+<td>This is the CameraAlert which contains this CAContext.</td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods Summary</p>
@@ -91,9 +94,6 @@ It contains all the attributes defined under CA context.</p>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#antares.context.CAContext.assembleVector" title="antares.context.CAContext.assembleVector"><code class="xref py py-obj docutils literal"><span class="pre">assembleVector</span></code></a>(context,&nbsp;attrname)</td>
 <td>The function assembles a vector of all the values of an attribute inside a context of the alert replicas of the camera alert.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.context.CAContext.getContainer" title="antares.context.CAContext.getContainer"><code class="xref py py-obj docutils literal"><span class="pre">getContainer</span></code></a>()</td>
-<td>This returns the Context&#8217;s container, which is a <code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code> in this case.</td>
 </tr>
 </tbody>
 </table>
@@ -107,6 +107,20 @@ It contains all the attributes defined under CA context.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.context.CAContext.camera_alert">
+<code class="descname">camera_alert</code><em class="property"> = None</em><a class="headerlink" href="#antares.context.CAContext.camera_alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the CameraAlert which contains this CAContext.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -133,22 +147,6 @@ a context of the alert replicas of the camera alert.</p>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy array</p>
 </td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="antares.context.CAContext.getContainer">
-<code class="descname">getContainer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.CAContext.getContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>This returns the Context&#8217;s container, which is a <code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code> in this case.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent <code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code></td>
 </tr>
 </tbody>
 </table>

@@ -76,8 +76,11 @@ It contains all the attributes defined under IS context.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="ar_context.html#antares.context.ARContext.name" title="antares.context.ARContext.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
-<td>Name of AR context.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.context.ISContext.name" title="antares.context.ISContext.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
+<td>Name of IS context.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.context.ISContext.ir_context" title="antares.context.ISContext.ir_context"><code class="xref py py-obj docutils literal"><span class="pre">ir_context</span></code></a></td>
+<td>This is the IRContext which contains this ISContext.</td>
 </tr>
 </tbody>
 </table>
@@ -88,9 +91,6 @@ It contains all the attributes defined under IS context.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#antares.context.ISContext.getContainer" title="antares.context.ISContext.getContainer"><code class="xref py py-obj docutils literal"><span class="pre">getContainer</span></code></a>()</td>
-<td>This returns the Context&#8217;s container, which is an <a class="reference internal" href="im_context.html#antares.context.IMContext" title="antares.context.IMContext"><code class="xref py py-class docutils literal"><span class="pre">IMContext</span></code></a> in this case.</td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Attributes Documentation</p>
@@ -108,23 +108,21 @@ It contains all the attributes defined under IS context.</p>
 </table>
 </dd></dl>
 
-<p class="rubric">Methods Documentation</p>
-<dl class="method">
-<dt id="antares.context.ISContext.getContainer">
-<code class="descname">getContainer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.ISContext.getContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>This returns the Context&#8217;s container, which is an <a class="reference internal" href="im_context.html#antares.context.IMContext" title="antares.context.IMContext"><code class="xref py py-class docutils literal"><span class="pre">IMContext</span></code></a> in this case.</p>
+<dl class="attribute">
+<dt id="antares.context.ISContext.ir_context">
+<code class="descname">ir_context</code><em class="property"> = None</em><a class="headerlink" href="#antares.context.ISContext.ir_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the IRContext which contains this ISContext.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent <a class="reference internal" href="im_context.html#antares.context.IMContext" title="antares.context.IMContext"><code class="xref py py-class docutils literal"><span class="pre">IMContext</span></code></a>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="im_context.html#antares.context.IMContext" title="antares.context.IMContext"><code class="xref py py-class docutils literal"><span class="pre">IMContext</span></code></a></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="ir_context.html#antares.context.IRContext" title="antares.context.IRContext"><code class="xref py py-class docutils literal"><span class="pre">IRContext</span></code></a></td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
+<p class="rubric">Methods Documentation</p>
 </dd></dl>
 
 </div>

@@ -59,7 +59,7 @@
 <em class="property">class </em><code class="descclassname">antares.alert.</code><code class="descname">AlertCombo</code><span class="sig-paren">(</span><em>combo_id</em>, <em>parent</em>, <em>replicas</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.AlertCombo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a></p>
 <p>Represents an alert combo which consists of a set of alert replicas
-together with associated astro objects. It is a sub-class of CameraAlert.
+together with associated astro objects.
 Beyond contexts available for CameraAlert,
 an alert combo is also associated with CB context objects.
 Combo is initialized with a set of alert replicas.</p>
@@ -69,7 +69,7 @@ Combo is initialized with a set of alert replicas.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">combo_id (<a class="reference external" href="https://docs.python.org/3.4/library/functions.html#int" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a>): The unique ID of the Combo.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">parent (<code class="xref py py-class docutils literal"><span class="pre">CAContext</span></code>): The CAContext which contains this Combo.</td>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">parent (<a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a>): The CameraAlert which contains this Combo.</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">alert_replicas (<a class="reference external" href="https://docs.python.org/3.4/library/stdtypes.html#list" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">list</span></code></a>): a list of <a class="reference internal" href="alert_replica.html#antares.alert.AlertReplica" title="antares.alert.AlertReplica"><code class="xref py py-class docutils literal"><span class="pre">AlertReplica</span></code></a></td>
 </tr>
@@ -87,6 +87,9 @@ Combo is initialized with a set of alert replicas.</p>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#antares.alert.AlertCombo.replicas" title="antares.alert.AlertCombo.replicas"><code class="xref py py-obj docutils literal"><span class="pre">replicas</span></code></a></td>
 <td>A list of the alert replicas created by the combo.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertCombo.camera_alert" title="antares.alert.AlertCombo.camera_alert"><code class="xref py py-obj docutils literal"><span class="pre">camera_alert</span></code></a></td>
+<td>This is the CameraAlert which contains this AlertReplica.</td>
 </tr>
 </tbody>
 </table>
@@ -124,6 +127,20 @@ per-combo processing.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.AlertCombo.camera_alert">
+<code class="descname">camera_alert</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.AlertCombo.camera_alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the CameraAlert which contains this AlertReplica.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code></a></td>
 </tr>
 </tbody>
 </table>

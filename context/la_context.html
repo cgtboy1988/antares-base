@@ -91,9 +91,6 @@ It contains all the attributes defined under LA context.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#antares.context.LAContext.assembleTimeSeriesAttribute" title="antares.context.LAContext.assembleTimeSeriesAttribute"><code class="xref py py-obj docutils literal"><span class="pre">assembleTimeSeriesAttribute</span></code></a>(context,&nbsp;...)</td>
 <td>The function assembles a time series of all the past values of an attribute inside a context of the camera alerts associated with a locus aggregated alert.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.context.LAContext.getContainer" title="antares.context.LAContext.getContainer"><code class="xref py py-obj docutils literal"><span class="pre">getContainer</span></code></a>()</td>
-<td>This returns the Context&#8217;s container, which is an Alert in this case.</td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Attributes Documentation</p>
@@ -136,22 +133,6 @@ CA, IM, IR, and IS contexts.</p>
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a time series of values.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">pandas.TimeSeries</span></code> of (uncertainFloat, string)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="antares.context.LAContext.getContainer">
-<code class="descname">getContainer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.LAContext.getContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>This returns the Context&#8217;s container, which is an Alert in this case.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent Alert.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="../alert/general_alert.html#antares.alert.Alert" title="antares.alert.Alert">Alert</a></td>
 </tr>
 </tbody>
 </table>

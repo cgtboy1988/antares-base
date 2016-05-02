@@ -67,9 +67,9 @@ and is initialized with these 5 available contexts.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#int" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a> alert_id: The unique ID of this Camera Alert.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#float" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a> ra: The right ascension of the Camera Alert&#8217;s observation, in radians.</td>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#float" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a> ra: The right ascension of the Camera Alert&#8217;s observation, in degrees.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#float" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a> decl: The declination of the Camera Alert&#8217;s observation, in radians.</td>
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#float" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a> decl: The declination of the Camera Alert&#8217;s observation, in degrees.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Param:</th><td class="field-body"><a class="reference internal" href="../context/ca_context.html#antares.context.CAContext" title="antares.context.CAContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.CAContext</span></code></a> CA: The CAContext which this Camera Alert contains.</td>
 </tr>
@@ -96,7 +96,7 @@ and is initialized with these 5 available contexts.</p>
 <td>CA (Camera Alert) context object.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#antares.alert.CameraAlert.LA" title="antares.alert.CameraAlert.LA"><code class="xref py py-obj docutils literal"><span class="pre">LA</span></code></a></td>
-<td>LA (Locus-aggregated Alert) context object that this alert is in.</td>
+<td>LA (Locus-aggregated Alert) context object that contains this alert.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#antares.alert.CameraAlert.IM" title="antares.alert.CameraAlert.IM"><code class="xref py py-obj docutils literal"><span class="pre">IM</span></code></a></td>
 <td>IM (Image) context object that this alert is in.</td>
@@ -163,7 +163,7 @@ and is initialized with these 5 available contexts.</p>
 <dl class="attribute">
 <dt id="antares.alert.CameraAlert.LA">
 <code class="descname">LA</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.CameraAlert.LA" title="Permalink to this definition">¶</a></dt>
-<dd><p>LA (Locus-aggregated Alert) context object that this alert is in. LA attributes are always available.  The LAContext owns this CameraAlert.</p>
+<dd><p>LA (Locus-aggregated Alert) context object that contains this alert. LA attributes are always available.  The LAContext contains this CameraAlert.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

@@ -79,6 +79,9 @@ It contains all the attributes defined under AR context.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#antares.context.ARContext.name" title="antares.context.ARContext.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
 <td>Name of AR context.</td>
 </tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.context.ARContext.alert_replica" title="antares.context.ARContext.alert_replica"><code class="xref py py-obj docutils literal"><span class="pre">alert_replica</span></code></a></td>
+<td>This is the AlertReplica which contains this ARContext.</td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods Summary</p>
@@ -88,9 +91,6 @@ It contains all the attributes defined under AR context.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#antares.context.ARContext.getContainer" title="antares.context.ARContext.getContainer"><code class="xref py py-obj docutils literal"><span class="pre">getContainer</span></code></a>()</td>
-<td>This returns the Context&#8217;s container, which is a <code class="xref py py-class docutils literal"><span class="pre">AlertReplica</span></code> in this case.</td>
-</tr>
 </tbody>
 </table>
 <p class="rubric">Attributes Documentation</p>
@@ -100,23 +100,21 @@ It contains all the attributes defined under AR context.</p>
 <dd><p>Name of AR context.</p>
 </dd></dl>
 
-<p class="rubric">Methods Documentation</p>
-<dl class="method">
-<dt id="antares.context.ARContext.getContainer">
-<code class="descname">getContainer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.ARContext.getContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>This returns the Context&#8217;s container, which is a <code class="xref py py-class docutils literal"><span class="pre">AlertReplica</span></code> in this case.</p>
+<dl class="attribute">
+<dt id="antares.context.ARContext.alert_replica">
+<code class="descname">alert_replica</code><em class="property"> = None</em><a class="headerlink" href="#antares.context.ARContext.alert_replica" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the AlertReplica which contains this ARContext.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent <code class="xref py py-class docutils literal"><span class="pre">AlertReplica</span></code>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">AlertReplica</span></code></td>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">AlertReplica</span></code></td>
 </tr>
 </tbody>
 </table>
 </dd></dl>
 
+<p class="rubric">Methods Documentation</p>
 </dd></dl>
 
 </div>

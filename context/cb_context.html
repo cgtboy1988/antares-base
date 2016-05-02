@@ -75,6 +75,9 @@ It contains all the attributes defined under CB context.
 <tr class="row-even"><td><a class="reference internal" href="#antares.context.CBContext.replicas" title="antares.context.CBContext.replicas"><code class="xref py py-obj docutils literal"><span class="pre">replicas</span></code></a></td>
 <td>A set of the alert replicas associated with the combo.</td>
 </tr>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.context.CBContext.alert_combo" title="antares.context.CBContext.alert_combo"><code class="xref py py-obj docutils literal"><span class="pre">alert_combo</span></code></a></td>
+<td>This is the AlertCombo which contains this CBContext.</td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Methods Summary</p>
@@ -86,9 +89,6 @@ It contains all the attributes defined under CB context.
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#antares.context.CBContext.assembleVector_replicas" title="antares.context.CBContext.assembleVector_replicas"><code class="xref py py-obj docutils literal"><span class="pre">assembleVector_replicas</span></code></a>(context,&nbsp;attrname)</td>
 <td>The function assembles a vector of all the values of an attribute inside a context of the alert replicas associated with the alert combo.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.context.CBContext.getContainer" title="antares.context.CBContext.getContainer"><code class="xref py py-obj docutils literal"><span class="pre">getContainer</span></code></a>()</td>
-<td>This returns the Context&#8217;s container, which is a <code class="xref py py-class docutils literal"><span class="pre">AlertCombo</span></code> in this case.</td>
 </tr>
 </tbody>
 </table>
@@ -121,6 +121,20 @@ It contains all the attributes defined under CB context.
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="antares.context.CBContext.alert_combo">
+<code class="descname">alert_combo</code><em class="property"> = None</em><a class="headerlink" href="#antares.context.CBContext.alert_combo" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the AlertCombo which contains this CBContext.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">AlertCombo</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <p class="rubric">Methods Documentation</p>
 <dl class="method">
 <dt id="antares.context.CBContext.assembleVector_replicas">
@@ -142,22 +156,6 @@ inside a context of the alert replicas associated with the alert combo.</p>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference external" href="https://docs.python.org/3.4/library/stdtypes.html#list" title="(in Python v3.4)">list</a></p>
 </td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="antares.context.CBContext.getContainer">
-<code class="descname">getContainer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.CBContext.getContainer" title="Permalink to this definition">¶</a></dt>
-<dd><p>This returns the Context&#8217;s container, which is a <code class="xref py py-class docutils literal"><span class="pre">AlertCombo</span></code> in this case.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The parent <code class="xref py py-class docutils literal"><span class="pre">AlertCombo</span></code>.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">AlertCombo</span></code></td>
 </tr>
 </tbody>
 </table>

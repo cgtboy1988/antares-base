@@ -58,7 +58,7 @@
 <dt id="antares.alert.AlertReplica">
 <em class="property">class </em><code class="descclassname">antares.alert.</code><code class="descname">AlertReplica</code><span class="sig-paren">(</span><em>parent</em>, <em>astro_id=None</em>, <em>init_from_db=False</em>, <em>replica_id=None</em>, <em>replica_num=None</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.AlertReplica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a></p>
-<p>Represents an alert replica. It is a sub-class of <a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code></a>.
+<p>Represents an alert replica.
 Beyond contexts available for CameraAlert, an alert replica is also
 associated with AO, AR, ES, LA, and PS context objects.
 Replica is initialized with its associated astro object (optional).</p>
@@ -66,7 +66,7 @@ Replica is initialized with its associated astro object (optional).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">parent(<a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a>): parent of the alert replica.</td>
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">parent(<a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a>): container of the alert replica.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">astr_id(int): ID of the associated astro object (optional).</td>
 </tr>
@@ -96,6 +96,9 @@ Replica is initialized with its associated astro object (optional).</p>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#antares.alert.AlertReplica.PS" title="antares.alert.AlertReplica.PS"><code class="xref py py-obj docutils literal"><span class="pre">PS</span></code></a></td>
 <td>PS (Point Source) context object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertReplica.camera_alert" title="antares.alert.AlertReplica.camera_alert"><code class="xref py py-obj docutils literal"><span class="pre">camera_alert</span></code></a></td>
+<td>This is the CameraAlert which contains this AlertReplica.</td>
 </tr>
 </tbody>
 </table>
@@ -173,6 +176,20 @@ if <code class="docutils literal"><span class="pre">AO.kind</span> <span class="
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../context/ps_context.html#antares.context.PSContext" title="antares.context.PSContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.PSContext</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.AlertReplica.camera_alert">
+<code class="descname">camera_alert</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.AlertReplica.camera_alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the CameraAlert which contains this AlertReplica.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">CameraAlert</span></code></a></td>
 </tr>
 </tbody>
 </table>
