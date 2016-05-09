@@ -66,7 +66,7 @@ Replica is initialized with its associated astro object (optional).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">parent(<a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a>): container of the alert replica.</td>
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body">parent(<a class="reference internal" href="camera_alert.html#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a>): The CameraAlert which contains the alert replica.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Param:</th><td class="field-body">astr_id(int): ID of the associated astro object (optional).</td>
 </tr>
@@ -89,13 +89,13 @@ Replica is initialized with its associated astro object (optional).</p>
 <td>AR (Alert Replica) context object.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#antares.alert.AlertReplica.AO" title="antares.alert.AlertReplica.AO"><code class="xref py py-obj docutils literal"><span class="pre">AO</span></code></a></td>
-<td>AO (Astro Object) context object (optional).</td>
+<td>AO (Astro Object) context object that this AlertReplica has (optional).</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertReplica.ES" title="antares.alert.AlertReplica.ES"><code class="xref py py-obj docutils literal"><span class="pre">ES</span></code></a></td>
-<td>ES (Extended Source) context object.</td>
+<td>ES (Extended Source) context object that this AlertReplica has (optional).</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#antares.alert.AlertReplica.PS" title="antares.alert.AlertReplica.PS"><code class="xref py py-obj docutils literal"><span class="pre">PS</span></code></a></td>
-<td>PS (Point Source) context object.</td>
+<td>PS (Point Source) context object that this AlertReplica has (optional).</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertReplica.camera_alert" title="antares.alert.AlertReplica.camera_alert"><code class="xref py py-obj docutils literal"><span class="pre">camera_alert</span></code></a></td>
 <td>This is the CameraAlert which contains this AlertReplica.</td>
@@ -109,13 +109,10 @@ Replica is initialized with its associated astro object (optional).</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertReplica.createReplica" title="antares.alert.AlertReplica.createReplica"><code class="xref py py-obj docutils literal"><span class="pre">createReplica</span></code></a>()</td>
-<td>Create a replica of the current alert replica.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#antares.alert.AlertReplica.divert" title="antares.alert.AlertReplica.divert"><code class="xref py py-obj docutils literal"><span class="pre">divert</span></code></a>(annotation)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertReplica.divert" title="antares.alert.AlertReplica.divert"><code class="xref py py-obj docutils literal"><span class="pre">divert</span></code></a>(annotation)</td>
 <td>Divert the alert replica.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.AlertReplica.mark_as_rare" title="antares.alert.AlertReplica.mark_as_rare"><code class="xref py py-obj docutils literal"><span class="pre">mark_as_rare</span></code></a>(annotation)</td>
+<tr class="row-even"><td><a class="reference internal" href="#antares.alert.AlertReplica.mark_as_rare" title="antares.alert.AlertReplica.mark_as_rare"><code class="xref py py-obj docutils literal"><span class="pre">mark_as_rare</span></code></a>(annotation)</td>
 <td>Mark the alert as a rare alert.</td>
 </tr>
 </tbody>
@@ -125,7 +122,7 @@ Replica is initialized with its associated astro object (optional).</p>
 <dt id="antares.alert.AlertReplica.AR">
 <code class="descname">AR</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.AlertReplica.AR" title="Permalink to this definition">¶</a></dt>
 <dd><p>AR (Alert Replica) context object.  The Alert Replica contains the ARContext.
-AR attributes are only accessible during per-replica processing.</p>
+AR propibutes are only accessible during per-replica processing.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -139,7 +136,7 @@ AR attributes are only accessible during per-replica processing.</p>
 <dl class="attribute">
 <dt id="antares.alert.AlertReplica.AO">
 <code class="descname">AO</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.AlertReplica.AO" title="Permalink to this definition">¶</a></dt>
-<dd><p>AO (Astro Object) context object (optional). AO attributes are available if
+<dd><p>AO (Astro Object) context object that this AlertReplica has (optional). AO propibutes are available if
 <code class="docutils literal"><span class="pre">AR.HasAstroObject</span></code> = <a class="reference external" href="https://docs.python.org/3.4/library/constants.html#True" title="(in Python v3.4)"><code class="xref py py-data docutils literal"><span class="pre">True</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -154,7 +151,7 @@ AR attributes are only accessible during per-replica processing.</p>
 <dl class="attribute">
 <dt id="antares.alert.AlertReplica.ES">
 <code class="descname">ES</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.AlertReplica.ES" title="Permalink to this definition">¶</a></dt>
-<dd><p>ES (Extended Source) context object. ES attributes are available only
+<dd><p>ES (Extended Source) context object that this AlertReplica has (optional). ES propibutes are available only
 if <code class="docutils literal"><span class="pre">AO.kind</span> <span class="pre">=</span> <span class="pre">&quot;extended</span> <span class="pre">source&quot;</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -169,7 +166,7 @@ if <code class="docutils literal"><span class="pre">AO.kind</span> <span class="
 <dl class="attribute">
 <dt id="antares.alert.AlertReplica.PS">
 <code class="descname">PS</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.AlertReplica.PS" title="Permalink to this definition">¶</a></dt>
-<dd><p>PS (Point Source) context object. PS attributes are available only
+<dd><p>PS (Point Source) context object that this AlertReplica has (optional). PS propibutes are available only
 if <code class="docutils literal"><span class="pre">AO.kind</span> <span class="pre">=</span> <span class="pre">&quot;point</span> <span class="pre">source&quot;</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -196,12 +193,6 @@ if <code class="docutils literal"><span class="pre">AO.kind</span> <span class="
 </dd></dl>
 
 <p class="rubric">Methods Documentation</p>
-<dl class="method">
-<dt id="antares.alert.AlertReplica.createReplica">
-<code class="descname">createReplica</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.AlertReplica.createReplica" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a replica of the current alert replica.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="antares.alert.AlertReplica.divert">
 <code class="descname">divert</code><span class="sig-paren">(</span><em>annotation</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.AlertReplica.divert" title="Permalink to this definition">¶</a></dt>

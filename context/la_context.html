@@ -57,10 +57,10 @@
 <p>Antares context module.</p>
 <dl class="class">
 <dt id="antares.context.LAContext">
-<em class="property">class </em><code class="descclassname">antares.context.</code><code class="descname">LAContext</code><span class="sig-paren">(</span><em>container_id</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.LAContext" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">antares.context.</code><code class="descname">LAContext</code><a class="headerlink" href="#antares.context.LAContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="context.html#antares.context.Context" title="antares.context.Context"><code class="xref py py-class docutils literal"><span class="pre">antares.context.Context</span></code></a></p>
 <p>Represents a LA (Locus-aggregated Alert) context object which is a sub-class of <a class="reference internal" href="context.html#antares.context.Context" title="antares.context.Context"><code class="xref py py-class docutils literal"><span class="pre">Context</span></code></a>.
-It contains all the attributes defined under LA context.</p>
+It contains all the properties defined under LA context.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -88,8 +88,8 @@ It contains all the attributes defined under LA context.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#antares.context.LAContext.assembleTimeSeriesAttribute" title="antares.context.LAContext.assembleTimeSeriesAttribute"><code class="xref py py-obj docutils literal"><span class="pre">assembleTimeSeriesAttribute</span></code></a>(context,&nbsp;...)</td>
-<td>The function assembles a time series of all the past values of an attribute inside a context of the camera alerts associated with a locus aggregated alert.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">LAContext.assembleTimeSeriesAttribute</span></code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -109,35 +109,6 @@ It contains all the attributes defined under LA context.</p>
 </dd></dl>
 
 <p class="rubric">Methods Documentation</p>
-<dl class="method">
-<dt id="antares.context.LAContext.assembleTimeSeriesAttribute">
-<code class="descname">assembleTimeSeriesAttribute</code><span class="sig-paren">(</span><em>context</em>, <em>attrname</em>, <em>start_time</em>, <em>end_time</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.context.LAContext.assembleTimeSeriesAttribute" title="Permalink to this definition">¶</a></dt>
-<dd><p>The function assembles a time series of all the past values
-of an attribute inside a context of the camera alerts associated
-with a locus aggregated alert.  Time series may be generated from
-CA, IM, IR, and IS contexts.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>context</strong> (<a class="reference external" href="https://docs.python.org/3.4/library/string.html#module-string" title="(in Python v3.4)"><em>string</em></a>) &#8211; the name of the context; valid contexts for this method include the CA, IM, IR,</td>
-</tr>
-</tbody>
-</table>
-<p>and IS contexts.
-:param string attrname: the name of the attribute</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a time series of values.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">pandas.TimeSeries</span></code> of (uncertainFloat, string)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </dd></dl>
 
 </div>

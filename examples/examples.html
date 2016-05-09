@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="Antares API 1.0 documentation" href="../index.html" />
-    <link rel="prev" title="Predefined Attributes" href="../attribute/predefined.html" /> 
+    <link rel="prev" title="Predefined Properties" href="../property/predefined.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -37,7 +37,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../attribute/predefined.html" title="Predefined Attributes"
+          <a href="../property/predefined.html" title="Predefined Properties"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Antares API 1.0 documentation</a> &raquo;</li> 
       </ul>
@@ -50,11 +50,11 @@
             
   <div class="section" id="examples-of-using-api">
 <h1>Examples of using API<a class="headerlink" href="#examples-of-using-api" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="how-to-assign-retrieve-the-value-to-from-an-attribute">
-<h2>How to assign/retrieve the value to/from an attribute<a class="headerlink" href="#how-to-assign-retrieve-the-value-to-from-an-attribute" title="Permalink to this headline">¶</a></h2>
-<p>Suppose we have a camera alert <code class="docutils literal"><span class="pre">alert</span></code> with some base attributes, for example,
+<div class="section" id="how-to-assign-retrieve-the-value-to-from-an-property">
+<h2>How to assign/retrieve the value to/from an property<a class="headerlink" href="#how-to-assign-retrieve-the-value-to-from-an-property" title="Permalink to this headline">¶</a></h2>
+<p>Suppose we have a camera alert <code class="docutils literal"><span class="pre">alert</span></code> with some base properties, for example,
 its <code class="docutils literal"><span class="pre">G</span></code> value and <code class="docutils literal"><span class="pre">R</span></code> value, if want to compute the derived
-attribute <code class="docutils literal"><span class="pre">GMinusR</span></code> which belongs to <code class="docutils literal"><span class="pre">CA</span></code> context, we can do:</p>
+property <code class="docutils literal"><span class="pre">GMinusR</span></code> which belongs to <code class="docutils literal"><span class="pre">CA</span></code> context, we can do:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">antares.alert</span> <span class="kn">import</span> <span class="n">CameraAlert</span>
 
 <span class="k">def</span> <span class="nf">computeGMinusR</span><span class="p">(</span> <span class="n">alert</span> <span class="p">):</span>
@@ -66,13 +66,13 @@ attribute <code class="docutils literal"><span class="pre">GMinusR</span></code>
 </pre></div>
 </div>
 <p>If <code class="docutils literal"><span class="pre">alert</span></code> does not have <code class="docutils literal"><span class="pre">CA</span></code> context or
-attribute <code class="docutils literal"><span class="pre">GMinusR</span></code> is not valid under <code class="docutils literal"><span class="pre">CA</span></code> context,
-<a class="reference external" href="https://docs.python.org/3.4/library/exceptions.html#AttributeError" title="(in Python v3.4)"><code class="xref py py-exc docutils literal"><span class="pre">AttributeError</span></code></a> exception will be raised.</p>
+property <code class="docutils literal"><span class="pre">GMinusR</span></code> is not valid under <code class="docutils literal"><span class="pre">CA</span></code> context,
+<code class="xref py py-exc docutils literal"><span class="pre">PropertyError</span></code> exception will be raised.</p>
 </div>
 <div class="section" id="diverting-an-alert">
 <h2>Diverting an alert<a class="headerlink" href="#diverting-an-alert" title="Permalink to this headline">¶</a></h2>
 <p>If we want to divert a camera alert <code class="docutils literal"><span class="pre">alert</span></code> based on the size of
-attribute <code class="docutils literal"><span class="pre">SizeOfLightCurve</span></code> under <code class="docutils literal"><span class="pre">LA</span></code> context, we can do:</p>
+property <code class="docutils literal"><span class="pre">SizeOfLightCurve</span></code> under <code class="docutils literal"><span class="pre">LA</span></code> context, we can do:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="nb">len</span><span class="p">(</span> <span class="n">alert</span><span class="o">.</span><span class="n">LA</span><span class="o">.</span><span class="n">SizeOfLightCurve</span> <span class="p">)</span> <span class="o">&gt;</span> <span class="n">MAX_LIGHT_CURVE_SIZE</span><span class="p">:</span>
     <span class="n">alert</span><span class="o">.</span><span class="n">divert</span><span class="p">(</span> <span class="s2">&quot;Light curve is too big&quot;</span> <span class="p">)</span>
 </pre></div>
@@ -91,13 +91,13 @@ do:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="creating-a-combo-based-on-the-value-of-attribute-redshift">
-<h2>Creating a combo based on the value of attribute <code class="docutils literal"><span class="pre">RedShift</span></code><a class="headerlink" href="#creating-a-combo-based-on-the-value-of-attribute-redshift" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="creating-a-combo-based-on-the-value-of-property-redshift">
+<h2>Creating a combo based on the value of property <code class="docutils literal"><span class="pre">RedShift</span></code><a class="headerlink" href="#creating-a-combo-based-on-the-value-of-property-redshift" title="Permalink to this headline">¶</a></h2>
 <p>We can create combos for a camera alert <code class="docutils literal"><span class="pre">alert</span></code> based on the value
-of attribute <code class="docutils literal"><span class="pre">RedShift</span></code> which belongs to <code class="docutils literal"><span class="pre">AR</span></code> context:</p>
+of property <code class="docutils literal"><span class="pre">RedShift</span></code> which belongs to <code class="docutils literal"><span class="pre">AR</span></code> context:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">CreateComboOnRedshift</span><span class="p">(</span> <span class="n">alert</span> <span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">  Create combos based on attribute redshift. &#39;alert&#39; is a camera alert.</span>
+<span class="sd">  Create combos based on property redshift. &#39;alert&#39; is a camera alert.</span>
 <span class="sd">  &quot;&quot;&quot;</span>
   <span class="k">if</span> <span class="n">alert</span><span class="o">.</span><span class="n">Type</span> <span class="o">!=</span> <span class="n">CAMERA_ALERT</span><span class="p">:</span>
       <span class="k">return</span>
@@ -127,10 +127,10 @@ can do:</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="different-ways-of-iterating-attribute-values">
-<h2>Different ways of iterating attribute values<a class="headerlink" href="#different-ways-of-iterating-attribute-values" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="iterating-attribute-values-of-alert-replicas-of-a-camera-alert">
-<h3>Iterating attribute values of alert replicas of a camera alert<a class="headerlink" href="#iterating-attribute-values-of-alert-replicas-of-a-camera-alert" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="different-ways-of-iterating-property-values">
+<h2>Different ways of iterating property values<a class="headerlink" href="#different-ways-of-iterating-property-values" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="iterating-property-values-of-alert-replicas-of-a-camera-alert">
+<h3>Iterating property values of alert replicas of a camera alert<a class="headerlink" href="#iterating-property-values-of-alert-replicas-of-a-camera-alert" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="n">alert</span><span class="o">.</span><span class="n">CA</span><span class="o">.</span><span class="n">assembleVector</span><span class="p">(</span> <span class="s1">&#39;AR&#39;</span><span class="p">,</span> <span class="s1">&#39;Redshift&#39;</span> <span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span> <span class="n">values</span> <span class="p">):</span>
@@ -138,11 +138,11 @@ can do:</p>
 </pre></div>
 </div>
 <p>Here, <code class="docutils literal"><span class="pre">alert</span></code> is a camera alert. The second line of code returns a
-numpy array of all the values of attribute <code class="docutils literal"><span class="pre">Redshift</span></code> under <code class="docutils literal"><span class="pre">AR</span></code>
+numpy array of all the values of property <code class="docutils literal"><span class="pre">Redshift</span></code> under <code class="docutils literal"><span class="pre">AR</span></code>
 context of replicas of <code class="docutils literal"><span class="pre">alert</span></code>.</p>
 </div>
-<div class="section" id="iterating-attribute-values-of-alert-replicas-of-an-alert-combo">
-<h3>Iterating attribute values of alert replicas of an alert combo<a class="headerlink" href="#iterating-attribute-values-of-alert-replicas-of-an-alert-combo" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="iterating-property-values-of-alert-replicas-of-an-alert-combo">
+<h3>Iterating property values of alert replicas of an alert combo<a class="headerlink" href="#iterating-property-values-of-alert-replicas-of-an-alert-combo" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">values</span> <span class="o">=</span> <span class="n">combo</span><span class="o">.</span><span class="n">CB</span><span class="o">.</span><span class="n">assembleVector</span><span class="p">(</span> <span class="s1">&#39;AR&#39;</span><span class="p">,</span> <span class="s1">&#39;Redshift&#39;</span> <span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nditer</span><span class="p">(</span> <span class="n">values</span> <span class="p">):</span>
@@ -150,11 +150,11 @@ context of replicas of <code class="docutils literal"><span class="pre">alert</s
 </pre></div>
 </div>
 <p>Here, <code class="docutils literal"><span class="pre">combo</span></code> is an alert combo. The second line of code returns a
-numpy array of all the values of attribute <code class="docutils literal"><span class="pre">Redshift</span></code> under <code class="docutils literal"><span class="pre">AR</span></code>
+numpy array of all the values of property <code class="docutils literal"><span class="pre">Redshift</span></code> under <code class="docutils literal"><span class="pre">AR</span></code>
 context of replicas that belongs to <code class="docutils literal"><span class="pre">combo</span></code>.</p>
 </div>
-<div class="section" id="iterating-a-time-series-of-all-past-values-an-attribute">
-<h3>Iterating a time series of all past values an attribute<a class="headerlink" href="#iterating-a-time-series-of-all-past-values-an-attribute" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="iterating-a-time-series-of-all-past-values-an-property">
+<h3>Iterating a time series of all past values an property<a class="headerlink" href="#iterating-a-time-series-of-all-past-values-an-property" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">alert</span><span class="o">.</span><span class="n">CA</span><span class="o">.</span><span class="n">GMinusR</span><span class="o">.</span><span class="n">time_series</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
 <span class="gp">&gt;&gt;&gt; </span>    <span class="k">print</span><span class="p">(</span> <span class="n">item</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">item</span><span class="o">.</span><span class="n">value</span> <span class="p">)</span>
 </pre></div>
@@ -175,15 +175,15 @@ a Pandas time series, so <code class="docutils literal"><span class="pre">item.i
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Examples of using API</a><ul>
-<li><a class="reference internal" href="#how-to-assign-retrieve-the-value-to-from-an-attribute">How to assign/retrieve the value to/from an attribute</a></li>
+<li><a class="reference internal" href="#how-to-assign-retrieve-the-value-to-from-an-property">How to assign/retrieve the value to/from an property</a></li>
 <li><a class="reference internal" href="#diverting-an-alert">Diverting an alert</a></li>
 <li><a class="reference internal" href="#creating-an-alert-replica">Creating an alert replica</a></li>
-<li><a class="reference internal" href="#creating-a-combo-based-on-the-value-of-attribute-redshift">Creating a combo based on the value of attribute <code class="docutils literal"><span class="pre">RedShift</span></code></a></li>
+<li><a class="reference internal" href="#creating-a-combo-based-on-the-value-of-property-redshift">Creating a combo based on the value of property <code class="docutils literal"><span class="pre">RedShift</span></code></a></li>
 <li><a class="reference internal" href="#assemble-a-light-curve">Assemble a light curve</a></li>
-<li><a class="reference internal" href="#different-ways-of-iterating-attribute-values">Different ways of iterating attribute values</a><ul>
-<li><a class="reference internal" href="#iterating-attribute-values-of-alert-replicas-of-a-camera-alert">Iterating attribute values of alert replicas of a camera alert</a></li>
-<li><a class="reference internal" href="#iterating-attribute-values-of-alert-replicas-of-an-alert-combo">Iterating attribute values of alert replicas of an alert combo</a></li>
-<li><a class="reference internal" href="#iterating-a-time-series-of-all-past-values-an-attribute">Iterating a time series of all past values an attribute</a></li>
+<li><a class="reference internal" href="#different-ways-of-iterating-property-values">Different ways of iterating property values</a><ul>
+<li><a class="reference internal" href="#iterating-property-values-of-alert-replicas-of-a-camera-alert">Iterating property values of alert replicas of a camera alert</a></li>
+<li><a class="reference internal" href="#iterating-property-values-of-alert-replicas-of-an-alert-combo">Iterating property values of alert replicas of an alert combo</a></li>
+<li><a class="reference internal" href="#iterating-a-time-series-of-all-past-values-an-property">Iterating a time series of all past values an property</a></li>
 </ul>
 </li>
 </ul>
@@ -191,8 +191,8 @@ a Pandas time series, so <code class="docutils literal"><span class="pre">item.i
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../attribute/predefined.html"
-                        title="previous chapter">Predefined Attributes</a></p>
+  <p class="topless"><a href="../property/predefined.html"
+                        title="previous chapter">Predefined Properties</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -227,7 +227,7 @@ a Pandas time series, so <code class="docutils literal"><span class="pre">item.i
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../attribute/predefined.html" title="Predefined Attributes"
+          <a href="../property/predefined.html" title="Predefined Properties"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Antares API 1.0 documentation</a> &raquo;</li> 
       </ul>

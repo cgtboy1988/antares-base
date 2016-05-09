@@ -3,22 +3,21 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-****************************************************************
-Uncertain Float ( :py:class:`antares.attribute.UncertainFloat` )
-****************************************************************
+********************************************************
+Time Period ( :py:class:`antares.property.TimePeriod` )
+********************************************************
 
 .. automodule:: antares.attribute
 
-.. autoclass:: UncertainFloat
+.. autoclass:: TimePeriod
    :show-inheritance:
 
    .. rubric:: Attributes Summary
 
    .. autosummary::
 
-      ~UncertainFloat.expected_value
-      ~UncertainFloat.lower_stddev
-      ~UncertainFloat.upper_stddev
+      ~TimePeriod.start
+      ~TimePeriod.end
 
    .. rubric:: Methods Summary
 
@@ -26,9 +25,8 @@ Uncertain Float ( :py:class:`antares.attribute.UncertainFloat` )
 
    .. rubric:: Attributes Documentation
 
-   .. autoattribute:: expected_value
-   .. autoattribute:: lower_stddev
-   .. autoattribute:: upper_stddev
+   .. autoattribute:: start
+   .. autoattribute:: end
 
    .. rubric:: Methods Documentation
 
