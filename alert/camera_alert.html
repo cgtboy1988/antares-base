@@ -35,6 +35,9 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="alert_replica.html" title="Alert Replica ( antares.alert.AlertReplica )"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -49,8 +52,302 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="camera-alert-antares-alert-cameraalert">
-<h1>Camera Alert ( <code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code> )<a class="headerlink" href="#camera-alert-antares-alert-cameraalert" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-antares.alert">
+<span id="camera-alert-antares-alert-cameraalert"></span><h1>Camera Alert ( <a class="reference internal" href="#antares.alert.CameraAlert" title="antares.alert.CameraAlert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.CameraAlert</span></code></a> )<a class="headerlink" href="#module-antares.alert" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="antares.alert.CameraAlert">
+<em class="property">class </em><code class="descclassname">antares.alert.</code><code class="descname">CameraAlert</code><span class="sig-paren">(</span><em>alert_id</em>, <em>ra</em>, <em>decl</em>, <em>CA</em>, <em>decision</em>, <em>locus_id</em>, <em>IM=None</em>, <em>IR=None</em>, <em>IS=None</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.CameraAlert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="general_alert.html#antares.alert.Alert" title="antares.alert.Alert"><code class="xref py py-class docutils literal"><span class="pre">antares.alert.Alert</span></code></a></p>
+<p>Represents a camera alert which is a sub-class of <a class="reference internal" href="general_alert.html#antares.alert.Alert" title="antares.alert.Alert"><code class="xref py py-class docutils literal"><span class="pre">Alert</span></code></a>.
+A camera alert is associated with CA, IM, IR, IS and LA context objects.
+and is initialized with these 5 available contexts.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#int" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a> alert_id: The unique ID of this Camera Alert.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#float" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a> ra: The right ascension of the Camera Alert&#8217;s observation, in degrees.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#float" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">float</span></code></a> decl: The declination of the Camera Alert&#8217;s observation, in degrees.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body"><a class="reference internal" href="../context/ca_context.html#antares.context.CAContext" title="antares.context.CAContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.CAContext</span></code></a> CA: The CAContext which this Camera Alert contains.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#int" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a> decision: The decision whether to divert, mark as rare, or undecided.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#int" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a> locus_id: The ID of the locus to which this Camera Alert belongs.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference internal" href="../context/im_context.html#antares.context.IMContext" title="antares.context.IMContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.IMContext</span></code></a> IM: The IMContext which this Camera Alert has.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Param:</th><td class="field-body"><a class="reference internal" href="../context/ir_context.html#antares.context.IRContext" title="antares.context.IRContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.IRContext</span></code></a> IR: The IRContext which this Camera Alert has.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference internal" href="../context/is_context.html#antares.context.ISContext" title="antares.context.ISContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.ISContext</span></code></a> IS: The ISContext which this Camera Alert has.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.CameraAlert.CA" title="antares.alert.CameraAlert.CA"><code class="xref py py-obj docutils literal"><span class="pre">CA</span></code></a></td>
+<td>CA (Camera Alert) context object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.alert.CameraAlert.LA" title="antares.alert.CameraAlert.LA"><code class="xref py py-obj docutils literal"><span class="pre">LA</span></code></a></td>
+<td>LA (Locus-aggregated Alert) context object that contains this alert.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.CameraAlert.IM" title="antares.alert.CameraAlert.IM"><code class="xref py py-obj docutils literal"><span class="pre">IM</span></code></a></td>
+<td>IM (Image) context object that this alert is in.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.alert.CameraAlert.IR" title="antares.alert.CameraAlert.IR"><code class="xref py py-obj docutils literal"><span class="pre">IR</span></code></a></td>
+<td>IR (Image RAFT) context object that this alert is in.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.CameraAlert.IS" title="antares.alert.CameraAlert.IS"><code class="xref py py-obj docutils literal"><span class="pre">IS</span></code></a></td>
+<td>IS (Image Section) context object that this alert is in.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.alert.CameraAlert.replicas" title="antares.alert.CameraAlert.replicas"><code class="xref py py-obj docutils literal"><span class="pre">replicas</span></code></a></td>
+<td>A list of the alert replicas created by camera alert.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.CameraAlert.combos" title="antares.alert.CameraAlert.combos"><code class="xref py py-obj docutils literal"><span class="pre">combos</span></code></a></td>
+<td>A list of the alert combos created by camera alert.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.alert.CameraAlert.annotation" title="antares.alert.CameraAlert.annotation"><code class="xref py py-obj docutils literal"><span class="pre">annotation</span></code></a></td>
+<td>The annotation notes the cause for diverting or marking as rare.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods Summary</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.CameraAlert.createReplica" title="antares.alert.CameraAlert.createReplica"><code class="xref py py-obj docutils literal"><span class="pre">createReplica</span></code></a>([astro_id])</td>
+<td>Create an alert replica which is associated with an optional astro object id <code class="docutils literal"><span class="pre">astro_id</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.alert.CameraAlert.createCombo" title="antares.alert.CameraAlert.createCombo"><code class="xref py py-obj docutils literal"><span class="pre">createCombo</span></code></a>(replicas)</td>
+<td>Create an alert combo object which contains a set of alert replicas.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.CameraAlert.numReplicas" title="antares.alert.CameraAlert.numReplicas"><code class="xref py py-obj docutils literal"><span class="pre">numReplicas</span></code></a>()</td>
+<td>Check how many replicas a Camera Alert has.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.alert.CameraAlert.throttle" title="antares.alert.CameraAlert.throttle"><code class="xref py py-obj docutils literal"><span class="pre">throttle</span></code></a>(annotation)</td>
+<td>Throttle the alert.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#antares.alert.CameraAlert.divert" title="antares.alert.CameraAlert.divert"><code class="xref py py-obj docutils literal"><span class="pre">divert</span></code></a>(annotation)</td>
+<td>Divert the alert.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#antares.alert.CameraAlert.mark_as_rare" title="antares.alert.CameraAlert.mark_as_rare"><code class="xref py py-obj docutils literal"><span class="pre">mark_as_rare</span></code></a>(annotation)</td>
+<td>Mark the alert as a rare alert.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes Documentation</p>
+<dl class="attribute">
+<dt id="antares.alert.CameraAlert.CA">
+<code class="descname">CA</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.CameraAlert.CA" title="Permalink to this definition">¶</a></dt>
+<dd><p>CA (Camera Alert) context object. CA propibutes are always available.  The Camera Alert contains its CAContext.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../context/ca_context.html#antares.context.CAContext" title="antares.context.CAContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.CAContext</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.CameraAlert.LA">
+<code class="descname">LA</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.CameraAlert.LA" title="Permalink to this definition">¶</a></dt>
+<dd><p>LA (Locus-aggregated Alert) context object that contains this alert. LA propibutes are always available.  The LAContext contains this CameraAlert.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../context/la_context.html#antares.context.LAContext" title="antares.context.LAContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.LAContext</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.CameraAlert.IM">
+<code class="descname">IM</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.CameraAlert.IM" title="Permalink to this definition">¶</a></dt>
+<dd><p>IM (Image) context object that this alert is in.  The CameraAlert has the IMContext.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../context/im_context.html#antares.context.IMContext" title="antares.context.IMContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.IMContext</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.CameraAlert.IR">
+<code class="descname">IR</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.CameraAlert.IR" title="Permalink to this definition">¶</a></dt>
+<dd><p>IR (Image RAFT) context object that this alert is in.  The CameraAlert has the IRContext.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../context/ir_context.html#antares.context.IRContext" title="antares.context.IRContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.IRContext</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.CameraAlert.IS">
+<code class="descname">IS</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.CameraAlert.IS" title="Permalink to this definition">¶</a></dt>
+<dd><p>IS (Image Section) context object that this alert is in.  The CameraAlert has the ISContext.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="../context/is_context.html#antares.context.ISContext" title="antares.context.ISContext"><code class="xref py py-class docutils literal"><span class="pre">antares.context.ISContext</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.CameraAlert.replicas">
+<code class="descname">replicas</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.CameraAlert.replicas" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of the alert replicas created by camera alert.  The Camera Alert contains these Replicas.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.CameraAlert.combos">
+<code class="descname">combos</code><em class="property"> = None</em><a class="headerlink" href="#antares.alert.CameraAlert.combos" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of the alert combos created by camera alert.  The Camera Alert contains these Combos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="antares.alert.CameraAlert.annotation">
+<code class="descname">annotation</code><a class="headerlink" href="#antares.alert.CameraAlert.annotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>The annotation notes the cause for diverting or marking as rare.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Methods Documentation</p>
+<dl class="method">
+<dt id="antares.alert.CameraAlert.throttle">
+<code class="descname">throttle</code><span class="sig-paren">(</span><em>annotation</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.CameraAlert.throttle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Throttle the alert.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>annotation</strong> (<a class="reference external" href="https://docs.python.org/3.4/library/string.html#module-string" title="(in Python v3.4)"><em>string</em></a>) &#8211; a short description of why the alert is throttled.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="antares.alert.CameraAlert.divert">
+<code class="descname">divert</code><span class="sig-paren">(</span><em>annotation</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.CameraAlert.divert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divert the alert.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>annotation</strong> (<a class="reference external" href="https://docs.python.org/3.4/library/string.html#module-string" title="(in Python v3.4)"><em>string</em></a>) &#8211; a short description of why the alert is diverted.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="antares.alert.CameraAlert.createReplica">
+<code class="descname">createReplica</code><span class="sig-paren">(</span><em>astro_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.CameraAlert.createReplica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an alert replica which is associated with an
+optional astro object id <code class="docutils literal"><span class="pre">astro_id</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/3.4/library/functions.html#int" title="(in Python v3.4)"><code class="xref py py-class docutils literal"><span class="pre">int</span></code></a> astro_id: ID of the astro object
+to be associated with the created replica. It is optional.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="antares.alert.CameraAlert.createCombo">
+<code class="descname">createCombo</code><span class="sig-paren">(</span><em>replicas</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.CameraAlert.createCombo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an alert combo object which contains a set of
+alert replicas.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>replicas</strong> (<a class="reference external" href="https://docs.python.org/3.4/library/stdtypes.html#list" title="(in Python v3.4)"><em>list</em></a>) &#8211; a list of alert replicas</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="antares.alert.CameraAlert.numReplicas">
+<code class="descname">numReplicas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.CameraAlert.numReplicas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check how many replicas a Camera Alert has.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The number of replicas generated from this alert.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="antares.alert.CameraAlert.mark_as_rare">
+<code class="descname">mark_as_rare</code><span class="sig-paren">(</span><em>annotation</em><span class="sig-paren">)</span><a class="headerlink" href="#antares.alert.CameraAlert.mark_as_rare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark the alert as a rare alert.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>annotation</strong> (<a class="reference external" href="https://docs.python.org/3.4/library/string.html#module-string" title="(in Python v3.4)"><em>string</em></a>) &#8211; a short description of why the alert is rare.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -95,6 +392,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="alert_replica.html" title="Alert Replica ( antares.alert.AlertReplica )"
              >next</a> |</li>
