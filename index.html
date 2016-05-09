@@ -141,10 +141,6 @@
 <img alt="_images/containerDiagram.png" src="_images/containerDiagram.png" />
 </div>
 </div>
-<div class="section" id="class-inheritance-diagram">
-<h2>Class inheritance diagram<a class="headerlink" href="#class-inheritance-diagram" title="Permalink to this headline">¶</a></h2>
-<a class="reference internal image-reference" href="_images/classes.png"><img alt="_images/classes.png" src="_images/classes.png" style="width: 500px; height: 480px;" /></a>
-</div>
 <div class="section" id="rules-constraints">
 <h2>Rules &amp; Constraints<a class="headerlink" href="#rules-constraints" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
@@ -220,6 +216,10 @@ combo.</p>
 </li>
 <li><p class="first">A derived property cannot have a circular definition (and so
 definitions form a directed acyclic graph).</p>
+</li>
+<li><p class="first">Alert Replicas will not be processed until Camera Alerts have finished processing.</p>
+</li>
+<li><p class="first">Alert Combos will not be processed until Alert Replicas have finished processing.</p>
 </li>
 </ol>
 </div>
@@ -301,7 +301,6 @@ definitions form a directed acyclic graph).</p>
 <li><a class="reference internal" href="#container-hierarchy">Container Hierarchy</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#class-inheritance-diagram">Class inheritance diagram</a></li>
 <li><a class="reference internal" href="#rules-constraints">Rules &amp; Constraints</a></li>
 <li><a class="reference internal" href="#examples">Examples</a></li>
 <li><a class="reference internal" href="#assumptions-and-comments">Assumptions and Comments</a></li>
