@@ -25,8 +25,9 @@ Float Pair ( :py:class:`antares.property.FloatPair` )
 
    .. rubric:: Attributes Documentation
 
-   .. autoproperty:: lower_bound
-   .. autoproperty:: upper_bound
+   .. autoattribute:: lower_bound
+   .. autoattribute:: upper_bound
 
    .. rubric:: Methods Documentation
+
 

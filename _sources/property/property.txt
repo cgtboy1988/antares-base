@@ -4,12 +4,12 @@
    contain the root `toctree` directive.
 
 *****************************************************
-Property ( :py:class:`antares.property.Property` )
+Attribute ( :py:class:`antares.property.Property` )
 *****************************************************
 
 .. automodule:: antares.property
 
-.. autoclass:: Property
+.. autoclass:: Attribute
    :show-inheritance:
 
    .. rubric:: Attributes Summary
@@ -30,12 +30,13 @@ Property ( :py:class:`antares.property.Property` )
 
    .. rubric:: Attributes Documentation
 
-   .. autoproperty:: vector
-   .. autoproperty:: description
-   .. autoproperty:: name
-   .. autoproperty:: context
-   .. autoproperty:: datatype
-   .. autoproperty:: annotation
-   .. autoproperty:: confidence
+   .. autoattribute:: vector
+   .. autoattribute:: description
+   .. autoattribute:: name
+   .. autoattribute:: context
+   .. autoattribute:: datatype
+   .. autoattribute:: annotation
+   .. autoattribute:: confidence
    .. rubric:: Methods Documentation
+
 

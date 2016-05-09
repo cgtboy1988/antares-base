@@ -7,7 +7,7 @@
 Time Period ( :py:class:`antares.property.TimePeriod` )
 ********************************************************
 
-.. automodule:: antares.attribute
+.. automodule:: antares.property
 
 .. autoclass:: TimePeriod
    :show-inheritance:
@@ -29,4 +29,5 @@ Time Period ( :py:class:`antares.property.TimePeriod` )
    .. autoattribute:: end
 
    .. rubric:: Methods Documentation
+
 

@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-***************************************************
-Int Pair ( :py:class:`antares.property.IntPair` )
-***************************************************
+*******************************************************
+Float Pair ( :py:class:`antares.property.FloatPair` )
+*******************************************************
 
 .. automodule:: antares.property
 
-.. autoclass:: IntPair
+.. autoclass:: FloatPair
    :show-inheritance:
 
    .. rubric:: Attributes Summary
@@ -25,8 +25,9 @@ Int Pair ( :py:class:`antares.property.IntPair` )
 
    .. rubric:: Attributes Documentation
 
-   .. autoproperty:: lower_bound
-   .. autoproperty:: upper_bound
+   .. autoattribute:: lower_bound
+   .. autoattribute:: upper_bound
 
    .. rubric:: Methods Documentation
+
 

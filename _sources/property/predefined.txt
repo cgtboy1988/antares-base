@@ -45,3 +45,4 @@ Predefined Properties for AO context
 - ``mmed``: (float) Median LINEAR magnitude
 - ``kurt``: (float) Kurtosis in LINEAR light curves
 - ``period``: (float) The period of the light curve here
+

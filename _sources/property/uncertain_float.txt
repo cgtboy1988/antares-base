@@ -7,7 +7,7 @@
 Uncertain Float ( :py:class:`antares.property.UncertainFloat` )
 ****************************************************************
 
-.. automodule:: antares.attribute
+.. automodule:: antares.property
 
 .. autoclass:: UncertainFloat
    :show-inheritance:
@@ -31,4 +31,5 @@ Uncertain Float ( :py:class:`antares.property.UncertainFloat` )
    .. autoattribute:: upper_stddev
 
    .. rubric:: Methods Documentation
+
 
